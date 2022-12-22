@@ -1,6 +1,14 @@
 import { FaBeer } from "react-icons/fa";
 import UpgradeBg from "../../assets/images/upgrade-bg.png";
 
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { VscBellDot } from "react-icons/vsc";
+import { Upgrade } from "../Upgrapde";
+import { Totals } from "../Totals";
+import { Chart } from "./Chart";
+import { Balance } from "./Balance";
+import { Buy } from "./Buy";
+
 export const Main = () => {
   return (
     <section className="w-full">
@@ -9,79 +17,27 @@ export const Main = () => {
           Welcome back, <b>Sally</b>
         </h1>
 
-        <nav>
-          {/* < input type="text" /> */}
-          <img src="" alt="" />
+        <nav className="flex items-center gap-4">
+          <VscBellDot size={24} />
+          <div className="w-8 h-8 rounded-full bg-purple ml-2"></div>
+          <BsThreeDotsVertical size={24} />
+
           <img src="" alt="" />
         </nav>
       </header>
 
-      <main className="h-[88vh] w-full flex [&>section]:px-5 pb-5 [&>section]:flex [&>section]:flex-col [&>section]:gap-8">
+      <main className="h-[88vh] w-full flex px-5 pb-5 [&>section]:flex [&>section]:flex-col [&>section]:gap-6 gap-6">
         <section className="w-[70%] [&>article]:w-full  [&>article]:rounded-xl">
-          <article className="h-[35%] bg-dark-purple flex flex-row justify-between gap-6">
-            <div className="m-8 flex flex-col justify-center gap-10">
-              <p className="text-3xl max-w-[500px] font-medium">
-                Upgrade Your Plan to Premium and Get unlimited access
-              </p>
-              <button className="py-4 px-10 rounded-md bg-purple font-bold w-fit">
-                Upgrade Now
-              </button>
-            </div>
-            <img
-              src={UpgradeBg}
-              className="h-full mix-blend-lighten mr-2"
-              alt=""
-            />
-          </article>
+          <Upgrade />
 
-          <article className="h-[25%] bg-section mt-4">
-            <ul className="flex gap-4 h-full   [&>li]:w-full [&>li]:h-full bg-dark-gray [&>li]:rounded-lg [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:justify-center [&>li]:relative">
-              <li className="bg-green text-dark-gray">
-                <div className="bg-green w-12 h-12 absolute top-0 rounded-full -mt-6 flex items-center justify-center">
-                  <FaBeer className="text-dark-gray" size={22} />
-                </div>
+          <Totals />
 
-                <b className="text-4xl">$1.234</b>
-                <b className="text-xs mt-1">Total assepts</b>
-              </li>
-              <li className="bg-section ">
-                <div className="bg-section w-12 h-12 absolute top-0 rounded-full -mt-6 flex items-center justify-center">
-                  <FaBeer className="" size={22} />
-                </div>
-
-                <b className="text-4xl">$1.234</b>
-                <b className="text-xs mt-1">Total assepts</b>
-              </li>
-              <li className="bg-section ">
-                <div className="bg-section w-12 h-12 absolute top-0 rounded-full -mt-6 flex items-center justify-center">
-                  <FaBeer className="" size={22} />
-                </div>
-
-                <b className="text-4xl">$1.234</b>
-                <b className="text-xs mt-1">Total assepts</b>
-              </li>
-            </ul>
-          </article>
-
-          <article className="h-[50%] bg-section"></article>
+          <Chart />
         </section>
 
-        <section className="w-[30%] [&>article]:bg-section [&>article]:w-full  [&>article]:rounded-lg pl-0 [&>article]:h-[50%] [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center [&>article]:gap-4">
-          <article className="flex">
-            <div className="border-4  border-purple border-dashed rounded-full flex items-center justify-center">
-              <div className="m-2 w-36 h-36 bg-purple rounded-full left-[50%] right-[50%]"></div>
-            </div>
-
-            <p>Total Balance</p>
-            <b className="text-4xl">$15,453.06</b>
-            <div className="[&>*]:bg-green [&>*]:rounded-full [&>*]:py-1 [&>*]:px-3 text-dark-gray text-xs flex gap-2 font-bold [&>*]:flex [&>*]:items-center [&>*]:justify-center">
-              <div>+12.34%</div>
-              <div className="">
-                <FaBeer />
-              </div>
-            </div>
-          </article>
-          <article className=""></article>
+        <section className="w-[30%]  [&>article]:bg-section [&>article]:w-full  [&>article]:rounded-lg pl-0 [&>article]:h-[50%] [&>article]:flex [&>article]:flex-col  [&>article]:gap-4">
+          <Balance />
+          <Buy />
         </section>
       </main>
     </section>
