@@ -68,7 +68,10 @@ export const Main = () => {
 
         <section className="w-[30%] [&>article]:bg-section [&>article]:w-full  [&>article]:rounded-lg pl-0 [&>article]:h-[50%] [&>article]:flex [&>article]:flex-col [&>article]:items-center [&>article]:justify-center [&>article]:gap-4">
           <article className="flex">
-            <div className="w-36 h-36 bg-purple rounded-full"></div>
+            <div className="border-4  border-purple border-dashed rounded-full flex items-center justify-center">
+              <div className="m-2 w-36 h-36 bg-purple rounded-full left-[50%] right-[50%]"></div>
+            </div>
+
             <p>Total Balance</p>
             <b className="text-4xl">$15,453.06</b>
             <div className="[&>*]:bg-green [&>*]:rounded-full [&>*]:py-1 [&>*]:px-3 text-dark-gray text-xs flex gap-2 font-bold [&>*]:flex [&>*]:items-center [&>*]:justify-center">
