@@ -1,6 +1,6 @@
 import { ResponsiveLine } from "@nivo/line";
 export const Chart = () => (
-  <article className="h-[60%]">
+  <div className="w-full h-full">
     <ResponsiveLine
       data={[
         {
@@ -85,10 +85,10 @@ export const Chart = () => (
         tickSize: 5,
         tickPadding: 2,
         tickRotation: 0,
-        legend: "days",
-        legendOffset: 13,
-        legendPosition: "end",
+        legend: "Days",
+        legendOffset: 30,
+        legendPosition: "middle",
       }}
     />
-  </article>
+  </div>
 );
