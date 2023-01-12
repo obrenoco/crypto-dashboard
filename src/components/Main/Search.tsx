@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { FiFilter } from "react-icons/fi";
 import { HiArrowTrendingDown, HiArrowTrendingUp } from "react-icons/hi2";
 import { formatedNumber } from "../../utils/numberFormat";
+import ApexCharts from "apexcharts";
 
 type Data = {
   from: string;
@@ -20,6 +21,46 @@ const filteredData: Data = [
     high: 57.39,
     low: 49.23,
     gainsPercentual: 4.65,
+  },
+  {
+    from: "eth",
+    to: "busd",
+    amount: 33999,
+    high: 57.39,
+    low: 49.23,
+    gainsPercentual: -4.65,
+  },
+  {
+    from: "eth",
+    to: "busd",
+    amount: 33999,
+    high: 57.39,
+    low: 49.23,
+    gainsPercentual: -4.65,
+  },
+  {
+    from: "eth",
+    to: "busd",
+    amount: 33999,
+    high: 57.39,
+    low: 49.23,
+    gainsPercentual: -4.65,
+  },
+  {
+    from: "eth",
+    to: "busd",
+    amount: 33999,
+    high: 57.39,
+    low: 49.23,
+    gainsPercentual: -4.65,
+  },
+  {
+    from: "eth",
+    to: "busd",
+    amount: 33999,
+    high: 57.39,
+    low: 49.23,
+    gainsPercentual: -4.65,
   },
   {
     from: "eth",

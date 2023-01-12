@@ -1,6 +1,7 @@
 import { FaGratipay, FaStar } from "react-icons/fa";
 import { formatedNumber } from "../../utils/numberFormat";
 import { Chart } from "./Chart";
+import { ApexChart } from "./Chart2";
 
 const sizeDivision = {
   header: 10,
@@ -22,6 +23,30 @@ type TableCell = {
 }[];
 
 const tableData: TableCell = [
+  {
+    price: { amount: 3000, currency: "busd" },
+    side: Side.Buy,
+    amount: { amount: 0.492938, currency: "busd" },
+    return: { amount: 3000, currency: "busd" },
+  },
+  {
+    price: { amount: 3000, currency: "busd" },
+    side: Side.Buy,
+    amount: { amount: 0.492938, currency: "busd" },
+    return: { amount: 3000, currency: "busd" },
+  },
+  {
+    price: { amount: 3000, currency: "busd" },
+    side: Side.Buy,
+    amount: { amount: 0.492938, currency: "busd" },
+    return: { amount: 3000, currency: "busd" },
+  },
+  {
+    price: { amount: 3000, currency: "busd" },
+    side: Side.Buy,
+    amount: { amount: 0.492938, currency: "busd" },
+    return: { amount: 3000, currency: "busd" },
+  },
   {
     price: { amount: 3000, currency: "busd" },
     side: Side.Buy,
@@ -92,47 +117,49 @@ export const MainChart = () => {
         </div>
       </header>
 
-      <div className={`w-full h-[50%]`}>
-        <Chart />
+      <div className="overflow-auto">
+        <div className={`w-full h-[50%]`}>
+          {/* <Chart /> */}
+          <ApexChart />
+        </div>
+
+        <table className="fixed-header w-full text-left border-separate border-spacing-y-2 border border-none text-sm overflow-auto">
+          <thead className="[&>th]:pl-4">
+            <th>Price</th>
+            <th>Side</th>
+            <th>Amount</th>
+            <th>Return</th>
+            <th>Edit</th>
+          </thead>
+          <tbody className="text-lg uppercase [&>tr]:bg-[#2F2E31] [&>td]:p-4">
+            {tableData.map((x) => (
+              <tr className="[&>td]:px-4 [&>td]:py-2">
+                <td>
+                  {formatedNumber(x.price.amount)} {x.price.currency}
+                </td>
+                <td
+                  className={`${
+                    x.side === Side.Buy ? "text-green" : "text-red-700"
+                  }`}
+                >
+                  {x.side}
+                </td>
+                <td className="">
+                  {x.amount.amount} {x.amount.currency}
+                </td>
+                <td>
+                  {formatedNumber(x.return.amount)} {x.return.currency}
+                </td>
+                <td className="capitalize">
+                  <button className="px-6 py-1 bg-[#414043] rounded-md hover:bg-opacity-[70%]">
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-
-      <table className="fixed-header w-full text-left border-separate border-spacing-y-2 border border-none text-sm overflow-auto">
-        <thead className="[&>th]:pl-4">
-          <th>Price</th>
-          <th>Side</th>
-          <th>Amount</th>
-          <th>Return</th>
-          <th>Edit</th>
-        </thead>
-        <tbody className="text-lg uppercase [&>tr]:bg-[#2F2E31] [&>td]:p-4">
-          {tableData.map((x) => (
-            <tr className="[&>td]:px-4 [&>td]:py-2">
-              <td>
-                {formatedNumber(x.price.amount)} {x.price.currency}
-              </td>
-              <td
-                className={`${
-                  x.side === Side.Buy ? "text-green" : "text-red-700"
-                }`}
-              >
-                {x.side}
-              </td>
-              <td className="">
-                {x.amount.amount} {x.amount.currency}
-              </td>
-              <td>
-                {formatedNumber(x.return.amount)} {x.return.currency}
-              </td>
-              <td className="capitalize">
-                <button className="px-6 py-1 bg-[#414043] rounded-md hover:bg-opacity-[70%]">
-                  Edit
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
       <footer
         className={`w-full h-[${sizeDivision.footer}%] flex mt-auto items-center justify-between`}
       >
