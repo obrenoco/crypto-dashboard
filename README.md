@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+<p align="center"><strong>💸 Crypto Wallet 💸</strong></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/58960887/212926740-98dbd744-27a0-42f3-9798-8dc3c2037685.png)
 
-## Available Scripts
+# :pushpin: TOC
 
-In the project directory, you can run:
+- [:robot: Technologies](#robot-technologies)
+- [:world_map: Roadmap](#world_map-roadmap)
+- [:construction_worker: Install](#construction_worker-install)
+- [:bug: Found a bug? Missing a specific feature?](#bug-issues)
+- [:closed_book: License](#closed_book-license)
 
-### `npm start`
+## :robot: Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] React
+- [x] Typescript
+- [x] TailwindCSS
+- [x] ApexCharts
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# :world_map: Roadmap
 
-### `npm test`
+- [x] Create desktop version
+- [x] Add graphs using ApexCharts
+- [x] [Add Tailwind](https://tailwindcss.com/)
+- [ ] Integrate with [Coin Market API](https://coinmarketcap.com/api/)
+- [ ] Add tests
+- [ ] Full responsiveness support
+- [ ] Add interactive filter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :construction_worker: Install
 
-### `npm run build`
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you use an SSH key registered in your Github account, clone the project using this command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`git clone git@github.com:obrenoco/crypto-dashboard`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After making the clone, run in your terminal:`yarn install`.<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and than `yarn start`
 
-### `npm run eject`
+<br/>
+3. Run Production Build yarn build
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Run `yarn test` Test Suite
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Run Linter `yarn lint`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Run the `yarn format` Code Formatter
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+7. Launch Bundle Inspection Tool `yarn bundle-profile:analyze`
 
-## Learn More
+# :bug: Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to **file a new issue** with a respective title and description on this repository. If you already found a solution to your problem, **Don't miss out too and come help :)**!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br />
+
+# :closed_book: License
+
+Released in 2023.
+
+Made with love by [Breno Romeiro](https://github.com/obrenoco) 💜🚀
