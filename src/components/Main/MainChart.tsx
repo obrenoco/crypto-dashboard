@@ -117,7 +117,7 @@ export const MainChart = () => {
         </div>
       </header>
 
-      <div className="overflow-auto">
+      <div className="overflow-y-auto overflow-x-hidden">
         <div className={`w-full h-[50%]`}>
           {/* <Chart /> */}
           <ApexChart />
